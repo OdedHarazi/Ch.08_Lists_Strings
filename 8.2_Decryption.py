@@ -11,4 +11,37 @@ along with the shift number?
 '''
 Secret_Message="Lxwp{j}~uj}rxw|*)bx~)l{jltnm)}qn)lxmn7)]qn)ox{ln)r|)\][XWP)r}q)x~*"
 
+#
+# for decrypt in range (-20,20):
+#     chr("Lxwp{j}~uj}rxw|*)bx~)l{jltnm)}qn)lxmn7)]qn)ox{ln)r|)\][XWP)r}q)x~*")
 
+    # print("1. Encrypt \n2. Decrypt")
+    # text = input("Choose an option")
+    # if text == "1":
+    #     encrypted = ' '
+    #     word = input("Enter a word to encrypt")
+    #     for letter in word:
+    #         i = ord(letter) + 5
+    #         newletter = chr(i)
+    #         encrypted += newletter
+    #
+    #     print(encrypted)
+    #     reselect = input("Would you like to use again?")
+    #     if reselect == "no" or reselect == "n":
+    #         done = True
+    #     else:
+    #         print("")
+    # elif text == "2":
+
+for x in range(-20, 21):
+    encrypted = ' '
+    s = 0
+    for letter in Secret_Message:
+            i = ord(letter)
+            i += x
+            newletter = chr(i)
+            if newletter == " ":
+                s+=1
+            encrypted += newletter
+    if s>2:
+        print(str(x)+'    '+ encrypted)
